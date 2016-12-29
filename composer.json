@@ -1,0 +1,11 @@
+{
+    "name": "aligent/magento-timed-banners",
+    "description": "Timed Banners for Magento 1",
+    "authors": [
+        {
+            "name": "Todd Hainsworth",
+            "email": "todd.hainsworth@aligent.com.au"
+        }
+    ],
+    "require": {}
+}
