@@ -32,4 +32,13 @@
             </aligent_holidaybanner>
         </default>
     </global>
+    <frontend>
+        <layout>
+            <updates>
+                <aligent_timedbanners module="Aligent_TimedBanners">
+                    <file>aligent_timedbanners.xml</file>
+                </aligent_timedbanners>
+            </updates>
+        </layout>
+    </frontend>
 </config>
