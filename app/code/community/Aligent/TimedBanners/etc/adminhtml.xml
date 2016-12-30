@@ -8,10 +8,10 @@
                         <children>
                             <config>
                                 <children>
-                                    <aligent translate="title" module="aligent_holidaybanner">
-                                        <title>Holiday Banner</title>
+                                    <aligent_timedbanners translate="title" module="aligent_timedbanners">
+                                        <title>Timed Banners</title>
                                         <sort_order>10</sort_order>
-                                    </aligent>
+                                    </aligent_timedbanners>
                                 </children>
                             </config>
                         </children>

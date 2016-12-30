@@ -24,12 +24,12 @@
             </aligent_timedbanners_setup>
         </resources>
         <default>
-            <aligent_holidaybanner>
+            <aligent_timedbanners>
                 <enabled>0</enabled>
-                <holiday_start_date>20/12/2000</holiday_start_date>
-                <holiday_end_date>12/1/2001</holiday_end_date>
+                <banner_start_date>20/12/2000</banner_start_date>
+                <banner_end_date>12/1/2001</banner_end_date>
                 <message>We are on holidays between the 20th of December and the 12th of January</message>
-            </aligent_holidaybanner>
+            </aligent_timedbanners>
         </default>
     </global>
     <frontend>

@@ -1,8 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <config>
+    <tabs>
+        <aligent translate="label">
+            <label>Aligent</label>
+            <sort_order>9999</sort_order>
+        </aligent>
+    </tabs>
     <sections>
-        <aligent translate="label" module="aligent_holidaybanner">
-            <label>Holiday Banner</label>
+        <aligent_timedbanners translate="label" module="aligent_timedbanners">
+            <label>Timed Banners</label>
             <tab>aligent</tab>
             <sort_order>1000</sort_order>
             <show_in_default>1</show_in_default>
@@ -10,7 +16,7 @@
             <show_in_store>1</show_in_store>
 
             <groups>
-                <holiday_banner translate="label">
+                <timedbanners translate="label">
                     <label>Configuration</label>
                     <sort_order>20</sort_order>
                     <show_in_default>1</show_in_default>
@@ -31,7 +37,7 @@
                         <start_date translate="label">
                             <label>Start Date</label>
                             <frontend_type>Text</frontend_type>
-                            <frontend_model>aligent_holidaybanner/adminhtml_system_config_date</frontend_model>
+                            <frontend_model>aligent_timedbanners/adminhtml_system_config_date</frontend_model>
                             <sort_order>2</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
@@ -42,7 +48,7 @@
                             <label>End Date</label>
                             <comment>Must be set if the 'Start Date' is also set</comment>
                             <frontend_type>Text</frontend_type>
-                            <frontend_model>aligent_holidaybanner/adminhtml_system_config_date</frontend_model>
+                            <frontend_model>aligent_timedbanners/adminhtml_system_config_date</frontend_model>
                             <sort_order>3</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
@@ -59,8 +65,8 @@
                             <validate>required-entry</validate>
                         </message>
                     </fields>
-                </holiday_banner>
+                </timedbanners>
             </groups>
-        </aligent>
+        </aligent_timedbanners>
     </sections>
 </config>

@@ -27,7 +27,7 @@
 /**
  * @see Mage_Page_Block_Html_Notices
  */
-$_helper = Mage::helper('aligent_holidaybanner');
+$_helper = Mage::helper('aligent_timedbanners');
 ?>
 <?php if ($this->displayNoscriptNotice()): ?>
     <noscript>
@@ -43,5 +43,5 @@ $_helper = Mage::helper('aligent_holidaybanner');
     <p class="demo-notice"><?php echo $this->__('This is a demo store. Any orders placed through this store will not be honored or fulfilled.') ?></p>
 <?php endif; ?>
 <?php if ($_helper->shouldShowBanner()): ?>
-    <p class="demo-notice holiday-notice"><?php echo $_helper->getHolidayMessage() // already localised ?></p>
+    <p class="demo-notice timed-banner"><?php echo $_helper->getMessage() // already localised ?></p>
 <?php endif; ?>

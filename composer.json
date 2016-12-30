@@ -1,6 +1,7 @@
 {
     "name": "aligent/magento-timed-banners",
-    "description": "Timed Banners for Magento 1",
+    "description": "Timed Banners for Magento 2",
+    "type": "magento-module",
     "authors": [
         {
             "name": "Todd Hainsworth",

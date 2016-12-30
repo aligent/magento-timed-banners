@@ -3,27 +3,27 @@
  * Class Aligent_TimedBanners_Helper_Data
  */
 class Aligent_TimedBanners_Helper_Data extends Mage_Core_Helper_Abstract {
-    const CONFIG_PREFIX = 'aligent/holiday_banner/';
+    const CONFIG_PREFIX = 'aligent/timedbanners/';
 
     /**
      * @return bool
      */
     public function shouldShowBanner()
     {
-        return Mage::getStoreConfig(self::CONFIG_PREFIX . 'enabled') && $this->isHoliday();
+        return Mage::getStoreConfig(self::CONFIG_PREFIX . 'enabled') && $this->isWithinTimedBannerRange();
     }
 
     /**
      * @return string
      */
-    public function getHolidayMessage() {
+    public function getMessage() {
         return $this->__(Mage::getStoreConfig(self::CONFIG_PREFIX . 'message', Mage::app()->getStore()));
     }
 
     /**
      * @return DateTime
      */
-    protected function getHolidayStartDate()
+    protected function getStartDate()
     {
         return DateTime::createFromFormat('d/m/y', Mage::getStoreConfig(self::CONFIG_PREFIX . 'start_date'));
     }
@@ -31,7 +31,7 @@ class Aligent_TimedBanners_Helper_Data extends Mage_Core_Helper_Abstract {
     /**
      * @return DateTime
      */
-    protected function getHolidayEndDate()
+    protected function getEndDate()
     {
         return DateTime::createFromFormat('d/m/y', Mage::getStoreConfig(self::CONFIG_PREFIX . 'end_date'));
     }
@@ -39,10 +39,10 @@ class Aligent_TimedBanners_Helper_Data extends Mage_Core_Helper_Abstract {
     /**
      * @return bool
      */
-    protected function isHoliday()
+    protected function isWithinTimedBannerRange()
     {
         $oCurrentDate = new DateTime();
-        return $oCurrentDate >= $this->getHolidayStartDate() && $oCurrentDate <= $this->getHolidayEndDate();
+        return $oCurrentDate >= $this->getStartDate() && $oCurrentDate <= $this->getEndDate();
     }
 
 }
