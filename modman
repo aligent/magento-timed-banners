@@ -1,2 +1,4 @@
 app/code/community/Aligent/TimedBanners     app/code/community/Aligent/TimedBanners
+app/design/frontend/base/default/layout/aligent_timedbanners.xml    app/design/frontend/base/default/layout/aligent_timed_banners.xml
+app/design/frontend/base/default/template/timedbanners/page/html/notices.phtml    app/design/frontend/base/default/template/timedbanners/page/html/notices.phtml
 app/etc/modules/*    app/etc/modules/
