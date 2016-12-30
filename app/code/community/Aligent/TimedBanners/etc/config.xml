@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Aligent_TimedBanners>
+            <version>0.0.1</version>
+        </Aligent_TimedBanners>
+    </modules>
+    <global>
+        <blocks>
+            <aligent_timedbanners>
+                <class>Aligent_TimedBanners_Block</class>
+            </aligent_timedbanners>
+        </blocks>
+        <helpers>
+            <aligent_timedbanners>
+                <class>Aligent_TimedBanners_Helper</class>
+            </aligent_timedbanners>
+        </helpers>
+        <resources>
+            <aligent_timedbanners_setup>
+                <setup>
+                    <module>Aligent_TimedBanners</module>
+                </setup>
+            </aligent_timedbanners_setup>
+        </resources>
+    </global>
+</config>
