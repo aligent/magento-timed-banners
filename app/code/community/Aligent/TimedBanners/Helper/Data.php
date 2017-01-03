@@ -3,7 +3,7 @@
  * Class Aligent_TimedBanners_Helper_Data
  */
 class Aligent_TimedBanners_Helper_Data extends Mage_Core_Helper_Abstract {
-    const CONFIG_PREFIX = 'aligent/timedbanners/';
+    const CONFIG_PREFIX = 'aligent_timedbanners/settings/';
 
     /**
      * @return bool
