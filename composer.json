@@ -1,6 +1,6 @@
 {
     "name": "aligent/magento-timed-banners",
-    "description": "Timed Banners for Magento 2",
+    "description": "Timed Banners for Magento 1",
     "type": "magento-module",
     "authors": [
         {
