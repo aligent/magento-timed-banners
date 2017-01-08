@@ -4,6 +4,7 @@
  */
 class Aligent_TimedBanners_Helper_Data extends Mage_Core_Helper_Abstract {
     const CONFIG_PREFIX = 'aligent_timedbanners/settings/';
+    const DATETIME_FORMAT = 'd/m/y g:i A';
 
     /**
      * @return bool
@@ -23,17 +24,17 @@ class Aligent_TimedBanners_Helper_Data extends Mage_Core_Helper_Abstract {
     /**
      * @return DateTime
      */
-    protected function getStartDate()
+    protected function getStart()
     {
-        return DateTime::createFromFormat('d/m/y', Mage::getStoreConfig(self::CONFIG_PREFIX . 'start_date'));
+        return DateTime::createFromFormat(self::DATETIME_FORMAT, Mage::getStoreConfig(self::CONFIG_PREFIX . 'start'));
     }
 
     /**
      * @return DateTime
      */
-    protected function getEndDate()
+    protected function getEnd()
     {
-        return DateTime::createFromFormat('d/m/y', Mage::getStoreConfig(self::CONFIG_PREFIX . 'end_date'));
+        return DateTime::createFromFormat(self::DATETIME_FORMAT, Mage::getStoreConfig(self::CONFIG_PREFIX . 'end'));
     }
 
     /**
@@ -41,8 +42,17 @@ class Aligent_TimedBanners_Helper_Data extends Mage_Core_Helper_Abstract {
      */
     protected function isWithinTimedBannerRange()
     {
-        $oCurrentDate = new DateTime();
-        return $oCurrentDate >= $this->getStartDate() && $oCurrentDate <= $this->getEndDate();
-    }
+        $oCurrentDateTime = new DateTime();
+        $oStart = $this->getStart();
+        $oEnd = $this->getEnd();
 
+        // There is only a start and it's now or before
+        if ($oStart && !$oEnd && $oCurrentDateTime >= $oStart) { return true; }
+        // Both start and end are present and now is between them
+        if ($oStart && $oEnd && $oCurrentDateTime >= $oStart && $oCurrentDateTime <= $oEnd) { return true; }
+        // There is no start but there is an end and now is before the end
+        if (!$oStart && $oEnd && $oCurrentDateTime <= $oEnd) { return true; }
+
+        return false;
+    }
 }

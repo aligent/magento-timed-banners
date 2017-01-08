@@ -36,10 +36,10 @@
                             <show_in_store>1</show_in_store>
                             <validate>required-entry</validate>
                         </enabled>
-                        <start_date translate="label">
-                            <label>Start Date</label>
+                        <start translate="label">
+                            <label>Start</label>
                             <frontend_type>Text</frontend_type>
-                            <frontend_model>aligent_timedbanners/adminhtml_system_config_date</frontend_model>
+                            <frontend_model>aligent_timedbanners/adminhtml_system_config_datetime</frontend_model>
                             <sort_order>2</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
@@ -48,12 +48,12 @@
                             <depends>
                                 <enabled>1</enabled>
                             </depends>
-                        </start_date>
-                        <end_date translate="label">
-                            <label>End Date</label>
-                            <comment>Must be set if the 'Start Date' is also set</comment>
+                        </start>
+                        <end translate="label">
+                            <label>End</label>
+                            <comment>Must be set if the 'Start' is also set</comment>
                             <frontend_type>Text</frontend_type>
-                            <frontend_model>aligent_timedbanners/adminhtml_system_config_date</frontend_model>
+                            <frontend_model>aligent_timedbanners/adminhtml_system_config_datetime</frontend_model>
                             <sort_order>3</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
@@ -62,7 +62,7 @@
                             <depends>
                                 <enabled>1</enabled>
                             </depends>
-                        </end_date>
+                        </end>
                         <message translate="label">
                             <label>Message</label>
                             <frontend_type>Text</frontend_type>

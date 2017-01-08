@@ -26,8 +26,8 @@
         <default>
             <aligent_timedbanners>
                 <enabled>0</enabled>
-                <banner_start_date>20/12/2000</banner_start_date>
-                <banner_end_date>12/1/2001</banner_end_date>
+                <banner_start>20/12/2000 12:00 AM</banner_start>
+                <banner_end>12/1/2001 12:00 AM</banner_end>
                 <message>We are on holidays between the 20th of December and the 12th of January</message>
             </aligent_timedbanners>
         </default>
