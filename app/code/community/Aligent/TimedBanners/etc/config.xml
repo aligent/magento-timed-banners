@@ -23,5 +23,22 @@
                 </setup>
             </aligent_timedbanners_setup>
         </resources>
+        <default>
+            <aligent_timedbanners>
+                <enabled>0</enabled>
+                <start>20/12/2000 12:00 AM</start>
+                <end>12/1/2001 12:00 AM</end>
+                <message>We are on holidays between the 20th of December and the 12th of January</message>
+            </aligent_timedbanners>
+        </default>
     </global>
+    <frontend>
+        <layout>
+            <updates>
+                <aligent_timedbanners module="Aligent_TimedBanners">
+                    <file>aligent_timedbanners.xml</file>
+                </aligent_timedbanners>
+            </updates>
+        </layout>
+    </frontend>
 </config>

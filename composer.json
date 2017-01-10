@@ -1,11 +1,17 @@
 {
     "name": "aligent/magento-timed-banners",
     "description": "Timed Banners for Magento 1",
+    "type": "magento-module",
     "authors": [
         {
             "name": "Todd Hainsworth",
             "email": "todd.hainsworth@aligent.com.au"
         }
     ],
-    "require": {}
+    "require": {
+        "magento-hackathon/magento-composer-installer": "*"
+    },
+    "extra": {
+        "magento-root-dir": "."
+    }
 }

@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<config>
+    <acl>
+        <resources>
+            <admin>
+                <children>
+                    <system>
+                        <children>
+                            <config>
+                                <children>
+                                    <aligent_timedbanners translate="title" module="aligent_timedbanners">
+                                        <title>Timed Banners</title>
+                                        <sort_order>10</sort_order>
+                                    </aligent_timedbanners>
+                                </children>
+                            </config>
+                        </children>
+                    </system>
+                </children>
+            </admin>
+        </resources>
+    </acl>
+</config>
