@@ -26,7 +26,7 @@ Then add the module to your dependencies:
 
 Finally tell Composer to install the module:
 
-    $ composer install
+    $ composer update aligent/magento-timed-banners
     
 ## Usage
 
