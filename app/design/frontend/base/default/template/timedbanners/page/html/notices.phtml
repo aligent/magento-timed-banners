@@ -43,5 +43,5 @@ $_helper = Mage::helper('aligent_timedbanners');
     <p class="demo-notice"><?php echo $this->__('This is a demo store. Any orders placed through this store will not be honored or fulfilled.') ?></p>
 <?php endif; ?>
 <?php if ($_helper->shouldShowBanner()): ?>
-    <p class="demo-notice timed-banner"><?php echo $_helper->getMessage() // already localised ?></p>
+    <div class="demo-notice timed-banner <?php echo $_helper->getTheme() ?>"><?php echo $_helper->getMessage() // already localised ?></div>
 <?php endif; ?>

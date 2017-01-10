@@ -75,6 +75,19 @@
                                 <enabled>1</enabled>
                             </depends>
                         </message>
+                        <theme_name translate="label">
+                            <label>Theme Name</label>
+                            <comment>IE. 'christmas', 'easter', 'holidays'</comment>
+                            <frontend_type>Text</frontend_type>
+                            <sort_order>5</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <validate>required-entry</validate>
+                            <depends>
+                                <enabled>1</enabled>
+                            </depends>
+                        </theme_name>
                     </fields>
                 </settings>
             </groups>
