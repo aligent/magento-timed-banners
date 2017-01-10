@@ -110,6 +110,6 @@ class Aligent_TimedBanners_Helper_Data extends Mage_Core_Helper_Abstract {
      * @return string the theme class name
      */
     public function getTheme() {
-        return strtolower(Mage::getStoreConfig(self::CONFIG_PREFIX . 'theme_name', Mage::app()->getStore()));
+        return $this->escapeHtml(strtolower(Mage::getStoreConfig(self::CONFIG_PREFIX . 'theme_name', Mage::app()->getStore())));
     }
 }
