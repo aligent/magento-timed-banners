@@ -24,6 +24,7 @@ class Aligent_TimedBanners_Block_Adminhtml_System_Config_Datetime extends Mage_A
             'time'         => true,
             'input_format' => $format,
             'format'       => $format,
+            'readonly'     => true,
         );
         $date->setData($data);
         $date->setValue($element->getValue(), $format);
