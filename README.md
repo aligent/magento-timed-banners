@@ -26,7 +26,7 @@ Then add the module to your dependencies:
 
 Finally tell Composer to install the module:
 
-    $ composer install
+    $ composer update aligent/magento-timed-banners
     
 ## Usage
 
@@ -36,4 +36,3 @@ the module you'll be able to setup a single banner to be shown between the two g
 ## Todo
 
 - Multiple Banners
-- Add ability to add times as well as dates
