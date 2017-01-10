@@ -16,7 +16,7 @@ class Aligent_TimedBanners_Helper_Data extends Mage_Core_Helper_Abstract {
      */
     public function shouldShowBanner()
     {
-        return Mage::getStoreConfig(self::CONFIG_PREFIX . 'enabled') && $this->isWithinTimedBannerRange();
+        return Mage::getStoreConfig(self::CONFIG_PREFIX . 'enabled', $this->getStore()) && $this->isWithinTimedBannerRange();
     }
 
     /**
@@ -25,26 +25,34 @@ class Aligent_TimedBanners_Helper_Data extends Mage_Core_Helper_Abstract {
      */
     public function getMessage() {
         return $this->__(
-            $this->escapeHtml(Mage::getStoreConfig(self::CONFIG_PREFIX . 'message', Mage::app()->getStore()))
+            $this->escapeHtml(Mage::getStoreConfig(self::CONFIG_PREFIX . 'message', $this->getStore()))
         );
     }
 
     /**
      * Get the date and time the banner should be shown from
-     * @return DateTime
+     * @return Zend_Date
      */
     protected function getStart()
     {
-        return $this->getLocale()->date(Mage::getStoreConfig(self::CONFIG_PREFIX . 'start'), $this->getDateTimeFormat());
+        return new Zend_Date(
+            Mage::getStoreConfig(self::CONFIG_PREFIX . 'start', $this->getStore()),
+            $this->getDateTimeFormat(),
+            $this->getLocale()->getLocaleCode()
+        );
     }
 
     /**
      * Get the date and time the banner should be shown until
-     * @return DateTime
+     * @return Zend_Date
      */
     protected function getEnd()
     {
-        return $this->getLocale()->date(Mage::getStoreConfig(self::CONFIG_PREFIX . 'end'), $this->getDateTimeFormat());
+        return new Zend_Date(
+            Mage::getStoreConfig(self::CONFIG_PREFIX . 'end', $this->getStore()),
+            $this->getDateTimeFormat(),
+            $this->getLocale()->getLocaleCode()
+        );
     }
 
     /**
@@ -87,5 +95,13 @@ class Aligent_TimedBanners_Helper_Data extends Mage_Core_Helper_Abstract {
      */
     protected function getLocale() {
         return Mage::app()->getLocale();
+    }
+
+    /**
+     * Get the current store
+     * @return Mage_Core_Model_Store
+     */
+    protected function getStore() {
+        return Mage::app()->getStore();
     }
 }
