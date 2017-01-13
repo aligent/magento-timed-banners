@@ -67,7 +67,11 @@ class Aligent_TimedBanners_Helper_Data extends Mage_Core_Helper_Abstract {
      */
     protected function isWithinTimedBannerRange()
     {
+        // First fetch the server datetime and then convert that exact datetime to UTC so that it's compatible
+        // with the UTC given start and end datetimes
         $oCurrentDateTime = $this->getLocale()->date(null, $this->getDateTimeFormat());
+        $oCurrentDateTime = new Zend_Date($oCurrentDateTime->toString(), $this->getDateTimeFormat(), $this->getLocale()->getLocaleCode());
+
         $oStart = $this->getStart();
         $oEnd = $this->getEnd();
 
